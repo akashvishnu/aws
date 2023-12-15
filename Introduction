@@ -1,2 +1,14 @@
-What is cloud computing?
-
+1)What is cloud computing?
+-> Cloud computing is known as different services through the Internet, including storage, servers, databases, networking.
+2)deployment models in cloud?
+->There are four types of deployment models such as private, public, hybrid, community.
+3)service model in cloud?
+-> There are three types of service model: (IAAS) Infrastructure as a service, (PAAS) Platform as a service, (SAAS) Software as a service.
+4)Architecture of cloud computing?
+-> There are two layers front end & back end. front end includes: cloud infrastructure, and back end includes: Application, service, runtime, storage, infra. with security and management. and the front end and back end in connected through internet.
+5)AWS global infrastructure count?
+-> The AWS Cloud have 102 Availability Zones within 32 geographic regions around the world, with announced plans for 15 more Availability Zones and 5 more AWS Regions in Canada, Germany, Malaysia, New Zealand, Thailand.
+6)Why do we use region in AWS?
+-> AWS have 32 regions all around the world, which helps to store the data of that specific area to the nearest data center, Availability Zones that that provides low latency, high throughput, highly redundant networking.
+7) what is service? & what are resources?
+->
