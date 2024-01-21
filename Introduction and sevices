@@ -12,3 +12,32 @@
 -> AWS have 32 regions all around the world, which helps to store the data of that specific area to the nearest data center, Availability Zones that that provides low latency, high throughput, highly redundant networking.
 7) what is service? & what are resources?
 ->
+--------------------------------------------------------------------------------------------------------------------
+IAM:-
+1) How many resources do we have in IAM?
+-> 
+2) Deployment model in IAM?
+->
+3) What is an IAM user?
+->
+4) What is the IAM group?
+->
+5) What is the IAM policy?
+->
+6) What is the IAM role?
+->
+7) Where do we attach identity based policy?
+->
+8) Where do we attach resource based policy?
+->
+9) Identities in IAM?
+->
+10) Can we be able to create aa policy vis json code?
+->
+11) If one user has created it by default, which permission has been asssigned to that user?
+->
+12) What is dominator policy?
+->
+13) What is ARN? What are the fields in ARN?
+->
+14) 
