@@ -11,33 +11,68 @@
 6)Why do we use region in AWS?
 -> AWS have 32 regions all around the world, which helps to store the data of that specific area to the nearest data center, Availability Zones that that provides low latency, high throughput, highly redundant networking.
 7) what is service? & what are resources?
-->
+-> The service means computing platform whic is provided by amazon that includes IaaS, PaaS, SaaS. and recource means the entity that you can work with, Example: S3 is service and bucket is resource.
 --------------------------------------------------------------------------------------------------------------------
 IAM:-
 1) How many resources do we have in IAM?
--> 
+-> there are 7 resources in IAM. 
 2) Deployment model in IAM?
-->
+-> on-premises, cloud, hybrid.
 3) What is an IAM user?
-->
+-> IAM user is a resource in IAM that has associated credentials and permisions.
 4) What is the IAM group?
-->
+-> IAM group is nothing but the collection of IAM users.
 5) What is the IAM policy?
-->
+-> IAM policies means the permisions to perform the actions.
 6) What is the IAM role?
-->
+-> IAM roles are entities you create and assign specific permissions to that allow trusted identities to perform actions in AWS.
 7) Where do we attach identity based policy?
-->
+-> IAM user, group, role.
 8) Where do we attach resource based policy?
-->
+-> Are attached to resources such as S3 buckets.
 9) Identities in IAM?
-->
-10) Can we be able to create aa policy vis json code?
-->
-11) If one user has created it by default, which permission has been asssigned to that user?
-->
+-> An IAM identity represents a human user or programmatic workload, who can perform actions in AWS.
+10) Can we be able to create a policy via json code?
+-> Yes we can.
+11) If one user has created it by default, which permission has been assigned to that user?
+-> By default a new IAM user has no permission assigned to it.
 12) What is dominator policy?
-->
+-> In a Group when a user has policy attached to it which is superior than other group members, that is known as dominator policy.  
 13) What is ARN? What are the fields in ARN?
-->
-14) 
+-> Amazon resource names (ARNs) which helps us to uniquely identify AWS resources. We require ARN when you need to spcify a resource clearly across all of AWS.
+> arn:partition:service:region:account-id:resource-id
+14) How many types of ARN partition?
+-> 3, 1> aws AWS region, 2> aws-cn china region, 3> aws-us-gov AWS GovCloud (US) region.
+15) What are tags?
+-> Tag means a label cinsisting of a user defined key and value, which can help toidentify and filter the resources.
+-------------------------------------------------------------------------------------------
+S3:-
+1) Difference between block storage and object storage?
+-> object storage stores and manages all date in an unconstructed format and units called objects, block storage takes any data, like file or database entry and divides it into blocks of equal sizes.
+2) Difference between static website and dynamin website?
+-> Static websites have stable content for all users, dynamic websites pull content on-the-fly, allowing its content to change with the user.
+3) What are the naming rules?
+-> Bucket name must be between 3 and 63 characters, only lowercase letters, numbers and dots, no IP addresses and domain names.
+4) What is the major resource of S3 bucket?
+-> To store data as objects within buckets.
+5) Why do we need to host static websites instead of dymanic websites?
+-> S3 can host static website without a need for a web server.
+6) What is versioning & why do we need versioning?
+-> it means keeping multiple variations of an object in the same bucket. verioning can be used to preserve, retrieve and restore every version of every object stored in bucket.
+7) What are the objects and types of objects that we uploading into the S3 bucket?
+-> the objects contains data, the object's metadata, and object's unique identifier. you can upload any type of objects like images, backups, data etc into s3 buckets.
+8) Why is MFA delete important in S3 bucket object level?
+-> MFA delete can help prevent accidental bucket deletions.
+9) What is S3 mulipart upload?
+-> multipart upload allows you to upload a single object as a set of parts.
+10) What are the storage classes in Amazon S3? **IMP**
+-> S3 Standard	
+S3 Intelligent-Tiering*
+S3 Express One Zone**	
+S3 Standard-IA
+S3 One Zone-IA
+S3 Glacier Instant Retrieval
+S3 Glacier Flexible Retrieval	
+S3 Glacier Deep Archive
+11) What is ACL?
+->  
