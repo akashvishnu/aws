@@ -75,4 +75,205 @@ S3 Glacier Instant Retrieval
 S3 Glacier Flexible Retrieval	
 S3 Glacier Deep Archive
 11) What is ACL?
-->  
+-> ACL enables you to manage access to buckets and objects.each bucket and object has an ACL attached to it as a subresource.
+12) Why do we need ACL?
+-> Each bucket and object has an ACL attached to it as a subresource. It defines which AWS accounts or groups are granted access and the type of access.
+13) What is life cycle policy? why do we need to use life cycle policy?
+-> An S3 Lifecycle configuration is a set of rules that define actions that Amazon S3 applies to a group of objects. 
+14) how can we make our bucket public?
+-> Choose the name of the bucket that you have configured as a static website.
+Choose Permissions.
+Under Block public access (bucket settings), choose Edit.
+Clear Block all public access, and choose Save changes.
+15) AWS pricing factor of the S3 service?
+-> The rate you're charged depends on your objects' size, how long you stored the objects during the month, and the storage class.
+16) how we make our object public?
+-> Update the object's access control list (ACL) using the Amazon S3 console
+Update the object's ACL using the AWS Command Line Interface (AWS CLI)
+Use a bucket policy that grants public read access to a specific object tag
+Use a bucket policy that grants public read access to a specific prefix
+17) how can we configure the static website logs in S3?
+-> On Amazon S3 Console choose the bucket to enable logging.
+Left click on the bucket.
+Go to Properties and select Server Access Logging.
+Enable logging for the needed bucket. Choose a prefix to distinguish your logs.
+18) What is CORS?
+-> Cross-origin resource sharing (CORS) defines a way for client web applications that are loaded in one domain to interact with resources in a different domain.
+19) What is S3 inventory?
+-> S3 Inventory helps you manage your storage by creating lists of the objects in an S3 bucket on a defined schedule. You can configure multiple inventory lists for a bucket.
+20) What does it mean by requester pay?
+-> the requester instead of the bucket owner pays the cost of the request and the data download from the bucket.
+------------------------------------------------------------------------------------------------------------
+SNS:-
+1) What is SNS?
+-> SNS is a web service that makes it easy to set up, operate, and send notifications from the cloud.
+2) Why do we use SNS ?
+-> SNS is typically used for applications that need realtime notifications.
+3) What is an Amazon SNS function, and how we can configure it.
+-> SNS is a managed service that provides message delivery from publishers to subscribers,  
+4) Difference between Amazon SNS & Amazon SQS.
+-> Sign in to the Amazon SNS console.
+In the left navigation pane, choose Topics.
+On the Topics page, choose Create topic.
+By default, the console creates a FIFO topic.
+In the Details section, enter a Name for the topic, such as MyTopic .
+Scroll to the end of the form and choose Create topic.
+5) What are the different delivery formats and transports in AWS SNS ?
+-> SMS, mobile push, and email.
+6) What is the difference between SNS FIFO & Standard while creating the SNS topic.
+-> SNS Standard topics provide best-effort ordering and at-least-once-delivery, while SNS FIFO topics support strict ordering and exactly-once delivery
+7) On which services are configured with the AWS SNS ?
+-> Amazon SQS, Amazon EC2 and Amazon S3.
+8) What is 10DLC in AWS ?
+-> 
+9) What are FIFO topics on SNS ?
+->
+10) What is SNS Mobile Push ?
+-> The ability to send push notification messages directly to apps on mobile devices.
+11)  On which delivery method do we use and configure the subscription ?
+-> AWS SNS.
+-----------------------------------------------------------------------------------------------
+EC2:-
+1. What is EC2, Why do we need EC2 service in cloud computing ?
+-> EC2 is scalable computing capacity in the AWS Cloud so you can develop and deploy applications without hardware constraints. Amazon EC2 reduces the time required to obtain and boot new server instances to minutes, allowing you to quickly scale capacity, both up and down, as your computing requirements change. 
+2. Features of Amazon EC2 ?
+-> Amazon EC2 features are Global Infrastructure· Cost and Capacity Optimization· Storage· Networking· Operating Systems and Software· Maintenance.
+3. What is Hypervisor ? and its types ?
+-> A hypervisor is a software that you can use to run multiple virtual machines on a single physical machine, Type 1 hypervisor and Type 2 hypervisor.
+4. Where we use hypervisor
+-> 
+5. Steps to create an EC2 instance.
+-> Step 1: Sign in to the AWS Management Console. EC2 dashboard. 
+Step 2: Choose a name of your instance. 
+Step 3: Choose an Amazon Machine Image (AMI) 
+Step 4: Choose an Instance Type. 
+Step 5: Create a key pair. 
+Step 6: Configure Security Group. 
+Step 7: Add Storage. 
+Step 8: Review and Launch.
+6. EC2 Instance state ?
+-> Pending, running, stopping, stopped, shutting down, terminated.
+7. How many types of EC2 Instance-State codes ?
+-> The valid values for instance-state-code will all be in the range of the low byte and they are:
+0 : pending
+16 : running
+32 : shutting-down
+48 : terminated
+64 : stopping
+80 : stopped
+8. What is the meaning of server hibernating mode ?
+-> Deep sleep.
+9. What is KMS ?
+-> a web service that securely protects cryptographic keys and allows other AWS services.
+10. AWS Amazon EC2 Instance types ?
+-> General Purpose Instances.
+Compute Optimized Instances.
+Memory-Optimized Instances.
+Storage Optimized Instances.
+Accelerated Computing Instances.
+11. How many types of status checks happen in aws ?
+-> 
+12. When we see the global view option in ec2 service ?
+->
+13. When we logged into the cloud account by default why do we always jump into the north virginia region, why it’s most popular ?
+->
+14. What are EBS Volumes and its types ?
+->
+15. Purpose of Using EBS volumes ?
+->
+16. How many types of purchasing options do we have in aws ec2 ?
+->
+17. Difference between AWS AMI Image & AWS Template ?
+->
+18. What is NIC & it’s types ?
+->
+19. What is elastic IP ? & WHY were we used ?
+->
+20. What is the snapshot of why we use it ?
+->
+21. How can we save money in snapshot costing, if an automated snapshot has been created ?
+->
+22. What is the lifecycle manager in snapshot ?
+->
+23. How does the Amazon lifecycle manager work ?
+->
+24. Difference between Security Group & NACL ?
+->
+25. What are NACL & Its types ?
+->
+26. How many IP Addresses can we attach to the instances ?
+->
+27. How many types of volume states do we have ?
+->
+28. What is a key pair, and its types ?
+->
+29. What is load balancer and its types ?
+->
+30. How does the load balancer work in the backend? Can you explain it ?
+->
+31. Features of Load Balancers ?
+->
+32. What is ASG ? & Its types ?
+->
+33. What is a Health Check ?
+->
+34. What is the threshold ?
+->
+35. What is the group of LB ?
+->
+36. Why do we prefer ALB over ALB ?
+->
+37. Difference between Web server & Application server ?
+->
+38. What is the target group ?
+->
+39. What is the desired capacity in ASG ?
+->
+40. How many types of the Scaling option ?
+->
+41. Scaling plans ?
+->
+42. Types Auto scaling
+->
+43. Difference between vertical scaling and horizontal scaling ?
+->
+44. Difference between AMI & Snapshot ?
+->
+45. What is difference between EBS/EFS/S3
+->
+---------------------------------------------------------------------------------------------------------
+VPC:-
+1. What is VPC ?
+->
+2. What are the Subnets when working with VPC ?
+->
+3. What is NAT Device ?
+->
+4. What is the difference between stateful & stateless filtering ?
+->
+5. What are the advantages of using default VPC ?
+->
+6. What is the internet gateway in VPC ?
+->
+7. What is Network ACL in VPC ?
+->
+8. What is the Security Group in VPC ?
+->
+9. What is an Elastic IP Address in VPC, and why do we need to use, realtime example?
+->
+10. Can we attach one Production Elastic IP to the new Prod server ?
+->
+11. How does ELB Affect a VPC ?
+->
+12. What are the limitations of VPC’s, Gateway and subnets ?
+->
+13. What is a Public IP Address and why do we use it ?
+->
+14. Explain Bastion Host Concept ?
+->
+15. When do we need to create a new customised VPC ?
+->
+16. What is Peering ? Why do we need to peer at two VPC’s ?
+->
+17. What is VPN, Where do we use VPN Tunnel ?
+->
