@@ -172,108 +172,161 @@ Memory-Optimized Instances.
 Storage Optimized Instances.
 Accelerated Computing Instances.
 11. How many types of status checks happen in aws ?
--> 
+-> each EC2 instance with two status checks.
 12. When we see the global view option in ec2 service ?
-->
-13. When we logged into the cloud account by default why do we always jump into the north virginia region, why it’s most popular ?
-->
+-> choose the "EC2 Global view" button near the top/centre of the screen.
+13. When we logged into the cloud account by default why do we always jump into the north virginia region, why it’s most popular?
+-> It's a default region selected by aws, It was the first region of the AWS. 
 14. What are EBS Volumes and its types ?
-->
+-> It's like a storage disk with the ability to contain various sizes of data, SSD-backed storage and HDD-backed storage.
 15. Purpose of Using EBS volumes ?
-->
+->  provide additional storage for EC2 instances, similar to a hard drive.
 16. How many types of purchasing options do we have in aws ec2 ?
-->
+-> AWS provides four main options to purchase Amazon EC2 Instances. They are On-Demand Instances, Reserved Instances, Spot Instances, and Savings Plans.
 17. Difference between AWS AMI Image & AWS Template ?
-->
+-> AWS AMIs are snapshots for individual EC2 instances, while CloudFormation templates define and provision entire infrastructure stacks.
 18. What is NIC & it’s types ?
-->
+->  a logical networking component that connects the EC2 instances in your Outposts subnet to your on-premises network. 
+Ethernet NIC
+Wireless NIC (Wi-Fi Adapter)
+Fiber NIC
+Token Ring NIC
+Bluetooth NIC
+Gigabit NIC
 19. What is elastic IP ? & WHY were we used ?
-->
+-> a static, public IPv4 address designed for dynamic cloud computing.
 20. What is the snapshot of why we use it ?
-->
+-> A snapshot is to take backups of your EBS volumes. used to enable disaster recovery, migrate data across regions and accounts, and improve backup compliance
 21. How can we save money in snapshot costing, if an automated snapshot has been created ?
-->
+-> Select the right EBS option.
+Delete unattached EBS volumes.
+Use snapshots instead of volumes.
+Delete old snapshots.
+Delete orphaned snapshots.
 22. What is the lifecycle manager in snapshot ?
-->
+-> a simple and automated way for you to manage your EBS snapshot backups.
 23. How does the Amazon lifecycle manager work ?
-->
+-> automates and orchestrates tasks on EC2 instances, allowing users to execute workflows for consistent configuration.
 24. Difference between Security Group & NACL ?
-->
+-> NACLs operate at the subnet level and control traffic in and out of a VPC, Security Groups operate at the instance level.
 25. What are NACL & Its types ?
-->
+->  A NACL is a security layer for your VPC, that acts as a firewall for controlling traffic in and out of one or more subnets.
 26. How many IP Addresses can we attach to the instances ?
-->
+-> We can Attach 5 IPs to one instance.
 27. How many types of volume states do we have ?
-->
+-> three types of volumes.
 28. What is a key pair, and its types ?
-->
+-> key pair is used for secure access to instances, public key and private key. 
 29. What is load balancer and its types ?
-->
-30. How does the load balancer work in the backend? Can you explain it ?
-->
+-> the method of distributing network traffic equally across a pool of resources that support an application. Application Load Balancers, Network Load Balancers, and Classic Load Balancers. 
 31. Features of Load Balancers ?
-->
+-> Auto Scaling Integration
+Health Checks
+SSL/TLS Termination
+Content-Based Routing
+WebSocket Support
+Connection Draining
+Stickiness
+Cross-Zone Load Balancing
+Integration with AWS Services
+IPv6 Support
 32. What is ASG ? & Its types ?
-->
+-> automatically adjusts the number of instances in a group to maintain application availability, On-Demand Instances,Spot Instances,Reserved Instances.
 33. What is a Health Check ?
-->
+-> It's a verification function which ensures that only healthy instances receive traffic from load balancers.
 34. What is the threshold ?
-->
+-> value above which something is true or will take place and below which it is not or will not.
 35. What is the group of LB ?
-->
+-> target groups.
 36. Why do we prefer ALB over ALB ?
-->
+-> 
 37. Difference between Web server & Application server ?
-->
+-> Web servers deliver static content, Application servers deliver dynamic content.
 38. What is the target group ?
-->
+-> a logical grouping of targets for routing traffic from a load balancer
 39. What is the desired capacity in ASG ?
-->
+-> 2.
 40. How many types of the Scaling option ?
-->
+-> Manual Scaling
+Scheduled Scaling
+Dynamic Scaling
+Predictive Scaling
+Step Scaling
+Target Tracking Scaling
 41. Scaling plans ?
-->
+-> 
 42. Types Auto scaling
-->
+-> horizontal and vertical scaling
 43. Difference between vertical scaling and horizontal scaling ?
-->
+-> horizontal scaling involves adding more machines, while vertical scaling involves adding more power (CPU, RAM, storage, etc.) 
 44. Difference between AMI & Snapshot ?
-->
+-> Snapshot is a point in time backup of specific volume, AMI is backup of the entire EC2 instance.
 45. What is difference between EBS/EFS/S3
-->
+-> EBS is block storage for EC2 instances, EFS is scalable shared file storage for EC2, and S3 is object storage for general web-based data storage.
 ---------------------------------------------------------------------------------------------------------
 VPC:-
 1. What is VPC ?
-->
+-> is a private cloud computing environment contained within a public cloud.
 2. What are the Subnets when working with VPC ?
-->
+-> Subnets are regional resources, and have IP address ranges associated with them.
 3. What is NAT Device ?
-->
+-> instances in a private subnet can connect to services outside your VPC but external services cannot initiate a connection with those instances.
 4. What is the difference between stateful & stateless filtering ?
-->
+-> Stateful security groups allow return traffic automatically, stateless network ACLs require explicit rules for both inbound and outbound traffic.
 5. What are the advantages of using default VPC ?
-->
+-> is suitable for getting started quickly and for launching public instances such as a blog or simple website. You can modify the components of your default VPC as needed. You can add subnets to your default VPC.
 6. What is the internet gateway in VPC ?
-->
+-> IGW allows communication between your VPC and the internet. It supports IPv4 and IPv6 traffic.
 7. What is Network ACL in VPC ?
-->
+-> an optional layer of security for your VPC that acts as a firewall for controlling traffic in subnets.
 8. What is the Security Group in VPC ?
-->
+-> SG means it controls the inbound and outbound traffic for the instance.
 9. What is an Elastic IP Address in VPC, and why do we need to use, realtime example?
-->
+-> a static public IP address that can be quickly reassigned between instances, useful for maintaining a consistent public-facing address for services like a web server, ensuring uninterrupted accessibility even if instances change.
 10. Can we attach one Production Elastic IP to the new Prod server ?
-->
+-> yes.
 11. How does ELB Affect a VPC ?
-->
+-> It enhances a VPC by distributing incoming traffic across multiple instances.
 12. What are the limitations of VPC’s, Gateway and subnets ?
-->
+-> VPC: Maximum CIDR block size is /16.
+Initial limit of 5 VPCs per region for new accounts.
+Internet Gateway: One internet gateway per VPC.
+Subnets: Subnet CIDR must be within VPC CIDR.
+Subnets cannot span multiple availability zones.
+Subnets can only be associated with one route table at a time
 13. What is a Public IP Address and why do we use it ?
-->
+-> router uses its public IP to access the internet. Other computers on the internet use your public IP address to communicate with the devices on your network.
 14. Explain Bastion Host Concept ?
-->
+-> It's a secure entry point to a private network, used for controlled access,  it includes enhanced security measures and limited functionality to minimize risk of unauthorized access.
 15. When do we need to create a new customised VPC ?
-->
+-> VPC is isolated from other clouds at the network layer, so you control your data and prevent it from mixing with the other's data.
 16. What is Peering ? Why do we need to peer at two VPC’s ?
-->
+-> VPC peering in AWS links two virtual networks for direct communication. to transfer the data privately.
 17. What is VPN, Where do we use VPN Tunnel ?
-->
+-> VPN tunnels used to securely connect networks for encrypted communication.
+----------------------------------------------------------------------------------------------------
+Cloud Trail:-
+1. What is a cloud trail ?
+-> It records and monitors API activity in your AWS account, providing logs for auditing, compliance, and security analysis.
+2. Why do we use trails, what is the exact purpose of enabling the trail in cloud production accounts ?
+-> It enhances visibility into actions taken on AWS resources, assists in troubleshooting.
+3. Explain how we can create a trail in aws cloud trail ?
+-> go to CloudTrail, choose "Trails," click "Create trail," configure settings (name, events, S3 bucket).
+4. How can we enable logging for S3 bucket using cloud trails ?
+-> Open the Amazon S3 console.
+Navigate to All Buckets and select the target S3 bucket.
+At the top right of the console, click Properties.
+Under Bucket: <s3_bucket_for_cloudtrail>, select Logging.
+Configure bucket logging: a) Select Enabled.
+5. How do you get the list of all created trailers in your production account ?
+-> In the CloudTrail dashboard, select the "Trails" option to view a list of existing trails.
+6. Can we create a trail for a multi region, if yes then how can we configure it ?
+-> yes, In the "Management events" section, select "Read/Write events" and choose the regions you want to include. You can select multiple regions.
+7. How can we disable the logging for certain events, services in cloud trail, If yes so explain how ?
+-> In the "Exclude management event data" and "Exclude data event" sections, you can choose to exclude specific events or services.
+8. Real time use case of cloud trail ?
+-> 
+9. What is cloud trail event history ?
+-> it's a chronological record of AWS API events, including user actions, timestamps, and associated resources, serving as an audit trail.
+10. What is log file integrity validation in cloud trail?
+-> CloudTrail Log File Integrity Validation ensures the security of log files by adding a signature, enabling users to easily check if the files are unchanged and trustworthy.
